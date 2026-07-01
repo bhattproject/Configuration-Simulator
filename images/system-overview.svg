@@ -1,0 +1,169 @@
+<svg width="1200" height="2600" viewBox="0 0 1200 2600" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <style>
+      .title { font: bold 34px Arial; fill: #111827; }
+      .subtitle { font: 16px Arial; fill: #374151; }
+      .header { font: bold 20px Arial; fill: white; }
+      .text { font: 14px Arial; fill: #111827; }
+      .box { fill: #f3f4f6; stroke: #2563eb; stroke-width: 2; rx: 12; }
+      .section { fill: #2563eb; rx: 12; }
+      .arrow { stroke: #374151; stroke-width: 2; marker-end: url(#arrow); }
+      .small { font: 13px Arial; fill: #374151; }
+    </style>
+
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#374151"></path>
+    </marker>
+  </defs>
+
+  <!-- TITLE -->
+  <text x="600" y="60" text-anchor="middle" class="title">
+    Configuration Simulator
+  </text>
+  <text x="600" y="90" text-anchor="middle" class="subtitle">
+    Enterprise-Level System Design &amp; Architecture Overview
+  </text>
+
+  <!-- 1. SYSTEM ARCHITECTURE -->
+  <rect x="100" y="130" width="1000" height="40" class="section"></rect>
+  <text x="600" y="158" text-anchor="middle" class="header">🏗 SYSTEM ARCHITECTURE</text>
+
+  <rect x="150" y="200" width="900" height="60" class="box"></rect>
+  <text x="600" y="235" text-anchor="middle" class="text">Windows OS (Read-Only Layer)</text>
+
+  <line x1="600" y1="260" x2="600" y2="300" class="arrow"></line>
+
+  <rect x="150" y="300" width="900" height="60" class="box"></rect>
+  <text x="600" y="335" text-anchor="middle" class="text">Configuration Reader Module</text>
+
+  <line x1="600" y1="360" x2="600" y2="400" class="arrow"></line>
+
+  <rect x="150" y="400" width="900" height="60" class="box"></rect>
+  <text x="600" y="435" text-anchor="middle" class="text">Simulation Engine + Validation Engine</text>
+
+  <line x1="600" y1="460" x2="600" y2="500" class="arrow"></line>
+
+  <rect x="150" y="500" width="900" height="60" class="box"></rect>
+  <text x="600" y="535" text-anchor="middle" class="text">Result Generator</text>
+
+  <line x1="600" y1="560" x2="600" y2="600" class="arrow"></line>
+
+  <rect x="150" y="600" width="900" height="60" class="box"></rect>
+  <text x="600" y="635" text-anchor="middle" class="text">JSON / XML Export Module</text>
+
+  <!-- 2. WORKFLOW -->
+  <rect x="100" y="690" width="1000" height="40" class="section"></rect>
+  <text x="600" y="718" text-anchor="middle" class="header">🔄 APPLICATION WORKFLOW</text>
+
+  <rect x="120" y="760" width="200" height="60" class="box"></rect>
+  <text x="220" y="795" text-anchor="middle" class="small">Read Config</text>
+
+  <rect x="340" y="760" width="200" height="60" class="box"></rect>
+  <text x="440" y="795" text-anchor="middle" class="small">Modify Settings</text>
+
+  <rect x="560" y="760" width="200" height="60" class="box"></rect>
+  <text x="660" y="795" text-anchor="middle" class="small">Simulate</text>
+
+  <rect x="780" y="760" width="200" height="60" class="box"></rect>
+  <text x="880" y="795" text-anchor="middle" class="small">Validate</text>
+
+  <rect x="1000" y="760" width="0" height="0"></rect>
+
+  <line x1="320" y1="790" x2="340" y2="790" class="arrow"></line>
+  <line x1="540" y1="790" x2="560" y2="790" class="arrow"></line>
+  <line x1="760" y1="790" x2="780" y2="790" class="arrow"></line>
+
+  <!-- 3. DATA FLOW -->
+  <rect x="100" y="860" width="1000" height="40" class="section"></rect>
+  <text x="600" y="888" text-anchor="middle" class="header">📊 DATA FLOW DIAGRAM</text>
+
+  <rect x="150" y="930" width="900" height="60" class="box"></rect>
+  <text x="600" y="965" text-anchor="middle" class="text">
+    Windows OS → Configuration Cache → Simulation Engine → Result Processor → Export Layer
+  </text>
+
+  <!-- 4. SEQUENCE -->
+  <rect x="100" y="1030" width="1000" height="40" class="section"></rect>
+  <text x="600" y="1058" text-anchor="middle" class="header">🔗 SEQUENCE DIAGRAM</text>
+
+  <rect x="150" y="1100" width="900" height="60" class="box"></rect>
+  <text x="600" y="1135" text-anchor="middle" class="text">
+    User → UI → Reader → Engine → Validator → Exporter → File Output
+  </text>
+
+  <!-- 5. COMPONENTS -->
+  <rect x="100" y="1210" width="1000" height="40" class="section"></rect>
+  <text x="600" y="1238" text-anchor="middle" class="header">🧩 COMPONENT ARCHITECTURE</text>
+
+  <rect x="150" y="1280" width="170" height="60" class="box"></rect>
+  <text x="235" y="1315" text-anchor="middle" class="small">UI Layer</text>
+
+  <rect x="340" y="1280" width="170" height="60" class="box"></rect>
+  <text x="425" y="1315" text-anchor="middle" class="small">Reader</text>
+
+  <rect x="530" y="1280" width="170" height="60" class="box"></rect>
+  <text x="615" y="1315" text-anchor="middle" class="small">Engine</text>
+
+  <rect x="720" y="1280" width="170" height="60" class="box"></rect>
+  <text x="805" y="1315" text-anchor="middle" class="small">Validator</text>
+
+  <rect x="910" y="1280" width="170" height="60" class="box"></rect>
+  <text x="995" y="1315" text-anchor="middle" class="small">Exporter</text>
+
+  <!-- 6. SIMULATION -->
+  <rect x="100" y="1390" width="1000" height="40" class="section"></rect>
+  <text x="600" y="1418" text-anchor="middle" class="header">⚙️ SIMULATION EXAMPLE</text>
+
+  <rect x="150" y="1460" width="400" height="60" class="box"></rect>
+  <text x="350" y="1495" text-anchor="middle" class="text">Balanced Power Mode</text>
+
+  <line x1="550" y1="1490" x2="650" y2="1490" class="arrow"></line>
+
+  <rect x="650" y="1460" width="400" height="60" class="box"></rect>
+  <text x="850" y="1495" text-anchor="middle" class="text">High Performance Mode</text>
+
+  <text x="600" y="1560" text-anchor="middle" class="small">
+    ⚡ Speed ↑ | 🔋 Battery ↓ | 🌡 Heat ↑
+  </text>
+
+  <!-- 7. PROJECT STRUCTURE -->
+  <rect x="100" y="1620" width="1000" height="40" class="section"></rect>
+  <text x="600" y="1648" text-anchor="middle" class="header">📁 PROJECT STRUCTURE</text>
+
+  <rect x="150" y="1690" width="900" height="120" class="box"></rect>
+  <text x="180" y="1730" class="small">/src</text>
+  <text x="180" y="1760" class="small">/ui</text>
+  <text x="180" y="1790" class="small">/core</text>
+  <text x="400" y="1730" class="small">/simulation</text>
+  <text x="400" y="1760" class="small">/reader</text>
+  <text x="400" y="1790" class="small">/export</text>
+  <text x="700" y="1730" class="small">/docs</text>
+  <text x="700" y="1760" class="small">/tests</text>
+  <text x="700" y="1790" class="small">README.md</text>
+
+  <!-- 8. SECURITY -->
+  <rect x="100" y="1850" width="1000" height="40" class="section"></rect>
+  <text x="600" y="1878" text-anchor="middle" class="header">🔒 SECURITY FEATURES</text>
+
+  <rect x="150" y="1920" width="900" height="120" class="box"></rect>
+  <text x="200" y="1960" class="text">✔ Read-only system access</text>
+  <text x="200" y="1990" class="text">✔ No registry modifications</text>
+  <text x="200" y="2020" class="text">✔ No admin privileges required</text>
+  <text x="200" y="2050" class="text">✔ Safe sandbox simulation</text>
+
+  <!-- 9. FUTURE -->
+  <rect x="100" y="2090" width="1000" height="40" class="section"></rect>
+  <text x="600" y="2118" text-anchor="middle" class="header">🚀 FUTURE ENHANCEMENTS</text>
+
+  <rect x="150" y="2160" width="900" height="220" class="box"></rect>
+
+  <text x="200" y="2200" class="text">• Configuration History Tracking</text>
+  <text x="200" y="2230" class="text">• Undo / Redo System States</text>
+  <text x="200" y="2260" class="text">• Group Policy Simulation</text>
+  <text x="200" y="2290" class="text">• Registry Preview Engine</text>
+  <text x="200" y="2320" class="text">• Performance Scoring System</text>
+  <text x="200" y="2350" class="text">• Security Risk Analyzer</text>
+  <text x="200" y="2380" class="text">• Cloud Profile Sync</text>
+
+</svg>
